@@ -11,9 +11,9 @@ class Student < ActiveRecord::Base
 	has_many :teachers, through: :student_teachers
 
 
-	def name
-		name = self.first_name + " " + self.last_name
-	end
+	# def name
+	# 	name = self.first_name + " " + self.last_name
+	# end
 
 	def age
 		age = Date.today.year - self.birthday.year
